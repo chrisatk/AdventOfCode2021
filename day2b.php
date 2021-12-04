@@ -5,7 +5,6 @@ error_reporting(E_ALL);
 ini_set('display_errors', TRUE);
 ini_set('display_startup_errors', TRUE);
 
-// Day 1a
 $input = new Input( 'https://tkinson.net/advent_of_code/2021/day2.txt' );
 
 $aim = 0;
