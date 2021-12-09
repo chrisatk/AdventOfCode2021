@@ -19,6 +19,16 @@ class Input {
 		return $this->input;
 	}
 
+	public function getInputAsChars() {
+		$new_array = array();
+		foreach ( $this->input as $line ) {
+			$items = str_split( trim( $line ) );
+			array_push( $new_array, $items ); 
+		}
+		return $new_array;
+	}
+	
+
 	public function print() {
 		foreach ( $this->input as $line ) {
 			echo $line."<br />";
