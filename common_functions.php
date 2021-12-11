@@ -8,6 +8,16 @@ function resetArrayKeys($arr) {
 	return $newList;
 }
 
+function printList( $list ) {
+	echo "<pre>\n";
+	foreach( $list as $y=>$line ){
+		foreach( $line as $x=>$item ) {
+			echo $list[$y][$x];
+		}
+		echo "<br />";
+	}
+	echo "</pre>\n";
+}
 
 
 ?>
