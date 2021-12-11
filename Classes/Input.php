@@ -23,11 +23,11 @@ class Input {
 		$new_array = array();
 		foreach ( $this->input as $line ) {
 			$items = str_split( trim( $line ) );
-			array_push( $new_array, $items ); 
+			array_push( $new_array, $items );
 		}
 		return $new_array;
 	}
-	
+
 
 	public function print() {
 		foreach ( $this->input as $line ) {
@@ -37,12 +37,12 @@ class Input {
 	}
 
 
-	public function printByChars( $highlight = NULL ) {
+	public function printByChars( $highlight = NULL, $condition = NULL ) {
 		$input_line = $this->getInputAsChars();
 		echo "<pre>\n";
 		foreach($input_line as $y=>$line) {
 			foreach($line as $x=>$item) {
-				if ( isset( $highlight[$y][$x] ) && $highlight[$y][$x] == 1 ) {
+				if ( ( isset( $highlight[$y][$x] ) && $highlight[$y][$x] == 1 ) || ( isset( $condition ) && $item == $condition ) ) {
 					echo "<b style=color:red>".$item."</b>";
 				} else {
 					echo $item;
